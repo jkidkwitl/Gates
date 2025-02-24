@@ -1,0 +1,500 @@
+/* ===============Thiết lập=============== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* scroll bar */
+body::-webkit-scrollbar {
+    width: 5px;
+}
+   
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+   
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 5px;
+}
+
+/* animation on scroll */
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.4;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+body div:not(.navigation) {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+
+/* ===============Thuộc tính thường dùng=============== */
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+
+.frame {
+    /* width: 100vw; */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: rgb(49, 49, 49);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.sub-info, .read-button-content{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color: rgb(75, 75, 75);
+}
+
+.sub-info .date {
+    margin-left: 20px;
+    color: rgb(110, 110, 110);
+}
+
+.cta-read {
+    color: rgb(49, 49, 49);
+    font-family: Poppins;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+/* ===============Thanh điều hướng=============== */
+
+.navigation .nav-main {
+    display: flex;
+    width: 100vw;
+    padding: 10px 0px;
+    position: fixed;
+    top: 0;
+    background-color: aliceblue;
+    z-index: 1;
+}
+
+.navigation .main-content {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navigation-list, .toggle {
+    display: flex;
+    margin-left: auto;
+}
+
+.navigation a {
+    color: #313131;
+    margin: 0 20px;
+}
+
+.nav-link:hover{
+    color: #313131;
+    text-shadow: 1px 0 0 #313131;
+}
+
+a.button {
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: center; 
+    background: linear-gradient(139.96deg, rgb(49, 49, 49) 0%,rgb(0, 0, 0) 101.89%);
+    padding: 3px 15px;
+}
+
+.button.login {
+    background: none;
+    color: rgb(49, 49, 49);
+    border: 2px solid rgb(99, 99, 99);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+a.button.login:hover {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(139.96deg, rgba(49, 49, 49, 0.6) 0%,rgba(0, 0, 0, 0.6) 101.89%);
+}
+
+a.button.sign-up:hover {
+    background: linear-gradient(139.96deg, rgba(49, 49, 49, 0.8) 0%,rgba(0, 0, 0, 0.8) 101.89%);
+}
+
+.navigation .side-bar, .toggle {
+    display: none;
+}
+
+@media screen and  (max-width: 680px) {
+    .navigation .main-content .navigation-list {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
+    }
+}
+
+/* sidebar */
+.navigation .side-bar {
+    z-index: 2;
+    height: 100vh;
+    width: 150px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px 10px #00000010;
+}
+
+.side-bar .main-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 90%;
+    margin-top: 20px;
+    /* margin-left: auto; */
+}
+
+.side-bar .main-frame a {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.side-bar .main-frame li {
+    margin-bottom: 10px;
+}
+
+/* ===============Hero=============== */
+
+.hero {
+    background-image: url("../image/torii-forest-illustration.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.hero img {
+    height: 100vh;
+    /* Intersect */
+    position: relative;
+    left: 45vw;
+}
+
+.hero .main-text {
+    position: absolute;
+    top: 30%;
+    width: 556px;
+    /* left: 6%; */
+    color: rgb(255, 255, 255);
+}
+
+.hero h1 {
+    font-family: Varela;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 95px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+@media screen and  (max-width: 600px) {
+    .hero .main-text {
+        width: 100vw;
+    }
+
+}
+
+/* ===============New & Trendy=============== */
+
+hr {
+    margin-bottom: 20px;
+}
+
+.new .main-content {
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.new.frame {
+    height: auto;
+}
+
+/* .new .main-content {
+    overflow: visible;
+    height: 2000px;
+} */
+
+.new .textbox {
+    /* flex-direction: column; */
+    /* overflow: visible; */
+}
+
+.new .textbox, .sub-info, .read-button-content {
+    display: flex;
+}
+
+.new img {
+    /* width: 50%; */
+    /* min-width: 630px; */
+    width: 50%;
+    height: auto;
+}
+
+.new .image {
+    background-size: cover;
+    min-width: 50%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.new .image1 {
+    background-image: url("../image/aot1.png");
+}
+
+.new .image2 {
+    background-image: url("../image/aot2.png");
+}
+
+/* .new .textbox {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.new .text {
+    /* min-width: 630px; */
+    /* width: 45vw; */
+    width: 50%;
+    padding: 5vw 6vw;
+    background-color: rgb(246, 250, 253);
+    opacity: 0.8;
+    box-sizing: border-box;
+
+}
+
+.new h3{
+    color: rgb(49, 49, 49);
+    font-size: 25.7px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0%;
+}
+
+.new .description {
+    color: rgb(110, 110, 110);
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.new .read-button-content {
+    margin-top: 30px;
+}
+
+.cta-read {
+    color: rgb(49, 49, 49);
+    font-family: Poppins;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.new .box2 {
+    flex-direction: row-reverse;
+}
+
+@media screen and  (max-width: 600px) {
+    .new .textbox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .new .image {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .new .text {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* ===============Now Trending=============== */
+
+.trending .sub-info {
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+.trending .main-content {
+    padding-top: 80px;
+}
+
+.trending .box {
+    width: 330px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.trending .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.trending h3 {
+    color: rgb(49, 49, 49);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-top: 3px;
+}
+
+.trending .description {
+    margin-top: 9px;
+    color: rgb(110, 110, 110);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.trending .read-button-content {
+    margin-top: 18px;
+    color: rgb(110, 110, 110);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.trending .cta-read {
+    color: rgb(49, 49, 49);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+@media screen and  (max-width: 600px) {
+    .trending .container {
+        justify-content: center;
+    }
+}
+
+/* ===============Short Reads=============== */
+
+.short .main-content {
+    padding-top: 80px;
+}
+
+.short .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.short img {
+    height: 100px;
+}
+
+.short .box {
+    display: flex;
+    width: 340px;
+    margin-bottom: 10px;
+}
+
+.short .textbox {
+    margin-left: 20px;
+}
+
+.short h3 {
+    color: rgb(2, 2, 2);
+    font-size: 17px;
+    font-weight: 500;   
+}
+
+.short p {
+    color: rgb(2, 2, 2);
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    opacity: 0.5;
+}
+
+.short .box:hover {
+    background-color: #eeeeee;
+}
+
+/* ===============footer=============== */
+
+footer .container {
+    margin-top: 70px;
+    background: linear-gradient(139.96deg, rgb(49, 49, 49),rgb(0, 0, 0) 102.485%);
+    /* kế thừa chung cho 2 p */
+    color: rgb(255, 255, 255); 
+    font-size: 16px;
+    line-height: 38px;
+    letter-spacing: 0.68px;
+}
+
+footer .box {
+    display: flex;
+    /* width: 70%; */
+    margin: 0 10vw;
+    padding: 70px 0;
+    align-items: center;
+    
+}
+
+footer .description{
+    margin-left: 6vw;
+}
+
+footer .container > p {
+    margin: 0 10vw;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}

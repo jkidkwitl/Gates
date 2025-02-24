@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Varela&display=swap"
+      rel="stylesheet"
+    />
+    <!-- reset -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>GATES</title>
+  </head>
+  <body>
+    <header>
+      <!-- ===============Thanh điều hướng=============== -->
+      <div class="navigation">
+        <div class="nav-main">
+          <div class="main-content">
+            <img src="./assets/image/Logo.svg" alt="GATE-logo" class="logo" />
+            <div class="navigation-list">
+              <ul class="navigation-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#new" class="nav-link">New</a></li>
+                <li><a href="#trending" class="nav-link">Trending</a></li>
+                <li><a href="#short" class="nav-link">Short</a></li>
+                <li><a href="#!" class="button sign-up">Sign Up</a></li>
+                <li><a href="#!" class="button login">Login</a></li>
+              </ul>
+            </div>
+            <div class="toggle">
+              <li onclick="showSideBar()">
+                <a href="#!" class="show-sidebar"
+                  ><img
+                    src="./assets/image/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="menu-icon"
+                /></a>
+              </li>
+            </div>
+          </div>
+        </div>
+        <div class="side-bar">
+          <div class="main-frame">
+            <li>
+              <a href="#!" onclick="hideSideBar()"
+                ><img
+                  src="./assets/image/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="close-icon"
+              /></a>
+            </li>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#new" class="nav-link">New</a></li>
+            <li><a href="#trending" class="nav-link">Trending</a></li>
+            <li><a href="#short" class="nav-link">Short</a></li>
+            <li><a href="#!" class="button sign-up">Sign Up</a></li>
+            <li><a href="#!" class="button login">Login</a></li>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function showSideBar() {
+          const sidebar = document.querySelector(".side-bar");
+          sidebar.style.display = "flex";
+        }
+        function hideSideBar() {
+          const sidebar = document.querySelector(".side-bar");
+          sidebar.style.display = "none";
+        }
+      </script>
+
+      <!-- ===============Hero=============== -->
+      <div class="hero frame" id="home">
+        <div class="main-content">
+          <img src="./assets/image/Intersect.png" alt="hero-background" />
+          <div class="main-text">
+            <h1>Welcome to Gates</h1>
+            <p>
+              Get the latest news on your favourite mangas, anime and manhwa
+              around the world!
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===============New & Trendy=============== -->
+    <div class="new frame" id="new">
+      <div class="main-content">
+        <h2 class="title">New & Trendy</h2>
+        <hr />
+        <div class="box1 textbox">
+          <div class="image image1"></div>
+          <!-- <img src="./assets/image/aot1.png" alt="illustration 1" /> -->
+          <div class="text">
+            <div class="sub-info">
+              <p class="tag">Fantasy</p>
+              <p class="date">• 1 Month Ago</p>
+            </div>
+            <h3>Akame Ga Kill</h3>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              sed doloribus quo unde vel expedita accusantium ea! Nisi sunt
+              distinctio dolorum illo minima incidunt, animi sint? Numquam
+              incidunt aspernatur possimus!
+            </p>
+            <div class="read-button-content">
+              <p class="info">12 Mins</p>
+              <a class="cta-read" href="#!">Read Full →</a>
+            </div>
+          </div>
+        </div>
+        <div class="box2 textbox">
+          <div class="image image2"></div>
+          <!-- <img src="./assets/image/aot2.png" alt="illustration 2" /> -->
+          <div class="text">
+            <div class="sub-info">
+              <p class="tag">Fantasy</p>
+              <p class="date">• 1 Month Ago</p>
+            </div>
+            <h3>Attack On Titans</h3>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              sed doloribus quo unde vel expedita accusantium ea! Nisi sunt
+              distinctio dolorum illo minima incidunt, animi sint? Numquam
+              incidunt aspernatur possimus!
+            </p>
+            <div class="read-button-content">
+              <p class="info">12 Mins</p>
+              <a class="cta-read" href="#!">Read Full →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===============Now Trending=============== -->
+    <div class="trending" id="trending">
+      <div class="main-content">
+        <h2>Now Trending</h2>
+        <hr />
+        <div class="container">
+          <div class="box box1">
+            <img src="./assets/image/trending1.png" alt="aot illustration" />
+            <div class="textbox">
+              <div class="sub-info">
+                <p class="tag">Fantasy</p>
+                <p class="date">• 1 Month Ago</p>
+              </div>
+              <h3>Attack On Titans</h3>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Aliquid sed corporis asperiores iusto! Autem alias quaerat quo?
+                Quae, provident voluptates.
+              </p>
+              <div class="read-button-content">
+                <p class="info">12 Mins</p>
+                <a class="cta-read" href="#!">Read Full →</a>
+              </div>
+            </div>
+          </div>
+          <div class="box box2">
+            <img
+              src="./assets/image/trending2.png"
+              alt="Dr.Stone illustration"
+            />
+            <div class="sub-info">
+              <p class="tag">Science</p>
+              <p class="date">• 1 Month Ago</p>
+            </div>
+            <h3>Dr. Stone</h3>
+            <p class="description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
+              sed corporis asperiores iusto! Autem alias quaerat quo? Quae,
+              provident voluptates.
+            </p>
+            <div class="read-button-content">
+              <p class="info">12 Mins</p>
+              <a class="cta-read" href="#!">Read Full →</a>
+            </div>
+          </div>
+          <div class="box box3">
+            <img
+              src="./assets/image/trending3.png"
+              alt="Second Chance illustration"
+            />
+            <div class="sub-info">
+              <p class="tag">Drama</p>
+              <p class="date">• 1 Month Ago</p>
+            </div>
+            <h3>Second Chance</h3>
+            <p class="description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
+              sed corporis asperiores iusto! Autem alias quaerat quo? Quae,
+              provident voluptates.
+            </p>
+            <div class="read-button-content">
+              <p class="info">12 Mins</p>
+              <a class="cta-read" href="#!">Read Full →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===============Short Reads=============== -->
+    <div class="short" id="short">
+      <div class="main-content">
+        <h2>Short Reads</h2>
+        <hr />
+        <div class="container">
+          <div class="box1 box">
+            <img
+              src="./assets/image/yosuganosora0061.jpg"
+              alt="AGK illustration"
+            />
+            <div class="textbox">
+              <h3>Yosuga No Sora</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="box2 box">
+            <img src="./assets/image/Short2.jpg" alt="NUHV illustration" />
+            <div class="textbox">
+              <h3>Goku Solo Picolo</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur cumque qui quas.
+              </p>
+            </div>
+          </div>
+          <div class="box3 box">
+            <img src="./assets/image/Short3.png" alt="CFOTZ illustration" />
+            <div class="textbox">
+              <h3>Childhood Friend Of The Zenith</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===============footer=============== -->
+    <footer>
+      <div class="container">
+        <div class="box">
+          <img src="./assets/image/footer-logo.png" alt="logo" />
+          <p class="description">
+            Gates is a blog that focuses on Japanese art and anime. They feature
+            information on Otaku conventions and other anime topics. Hear from
+            famous anime filmmakers and artists as well as plenty of news about
+            the art of cartoon creation in the Japanese culture.
+          </p>
+        </div>
+        <hr />
+        <p>Quach Van Tuan Anh - Jkidkwitl</p>
+      </div>
+    </footer>
+  </body>
+</html>
