@@ -30,10 +30,10 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-body div:not(.navigation) {
+.frame, .main-content, .box {
     animation: appear 5s linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 40%;
 }
 
 
@@ -56,7 +56,6 @@ body {
 }
 
 .frame {
-    /* width: 100vw; */
     height: 100vh;
     overflow: hidden;
 }
@@ -164,7 +163,6 @@ a.button.sign-up:hover {
     .navigation .main-content .navigation-list {
         display: none;
     }
-
     .toggle {
         display: block;
     }
@@ -189,7 +187,6 @@ a.button.sign-up:hover {
     align-items: flex-end;
     width: 90%;
     margin-top: 20px;
-    /* margin-left: auto; */
 }
 
 .side-bar .main-frame a {
@@ -221,7 +218,6 @@ a.button.sign-up:hover {
     position: absolute;
     top: 30%;
     width: 556px;
-    /* left: 6%; */
     color: rgb(255, 255, 255);
 }
 
@@ -262,25 +258,8 @@ hr {
     height: auto;
 }
 
-/* .new .main-content {
-    overflow: visible;
-    height: 2000px;
-} */
-
-.new .textbox {
-    /* flex-direction: column; */
-    /* overflow: visible; */
-}
-
 .new .textbox, .sub-info, .read-button-content {
     display: flex;
-}
-
-.new img {
-    /* width: 50%; */
-    /* min-width: 630px; */
-    width: 50%;
-    height: auto;
 }
 
 .new .image {
@@ -299,14 +278,7 @@ hr {
     background-image: url("../image/aot2.png");
 }
 
-/* .new .textbox {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
 .new .text {
-    /* min-width: 630px; */
-    /* width: 45vw; */
     width: 50%;
     padding: 5vw 6vw;
     background-color: rgb(246, 250, 253);
@@ -482,7 +454,6 @@ footer .container {
 
 footer .box {
     display: flex;
-    /* width: 70%; */
     margin: 0 10vw;
     padding: 70px 0;
     align-items: center;
