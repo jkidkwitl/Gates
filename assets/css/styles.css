@@ -170,11 +170,13 @@ a.button.sign-up:hover {
 
 /* sidebar */
 .navigation .side-bar {
+    /* display: none; */
+    display: block;
     z-index: 2;
     height: 100vh;
     width: 150px;
     position: fixed;
-    right: 0;
+    right: -150px;
     top: 0;
     background-color: aliceblue;
     box-shadow: 0 0 10px 10px #00000010;
@@ -196,6 +198,42 @@ a.button.sign-up:hover {
 
 .side-bar .main-frame li {
     margin-bottom: 10px;
+}
+
+.navigation .side-bar.active {
+    /* display: block; */
+    animation-name: slide-in;
+    animation-duration: 0.35s;
+    animation-timing-function: ease-out; /* Làm mượt animation */
+    /* Giữ trạng thái cuối */
+    animation-fill-mode: forwards;
+}
+
+.navigation .side-bar.hidden {
+    /* display: block; */
+    animation-name: slide-out;
+    animation-duration: 0.35s;
+    animation-timing-function: ease-in-out; /* Làm mượt animation */
+    /* Giữ trạng thái cuối */
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(0); /* Bắt đầu từ bên phải ngoài viewport */
+    }
+    100% {
+        transform: translateX(-150px); /* Kết thúc tại vị trí 100vw - 150px */
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(-150px); 
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* ===============Hero=============== */
@@ -238,7 +276,16 @@ a.button.sign-up:hover {
 
 @media screen and  (max-width: 600px) {
     .hero .main-text {
-        width: 100vw;
+        width: 90vw;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+        line-height: 70px;
+    }
+
+    .hero p {
+        font-size: 14px;
     }
 
 }
@@ -414,12 +461,14 @@ hr {
 
 .short .box {
     display: flex;
-    width: 340px;
+    width: 350px;
     margin-bottom: 10px;
 }
 
 .short .textbox {
+    box-sizing: border-box;
     margin-left: 20px;
+    padding-right: 10px;
 }
 
 .short h3 {
@@ -438,6 +487,12 @@ hr {
 
 .short .box:hover {
     background-color: #eeeeee;
+}
+
+@media screen and  (max-width: 600px) {
+    .short .box {
+        width: 100%;
+    }
 }
 
 /* ===============footer=============== */
