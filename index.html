@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-        <div class="side-bar">
+        <div class="side-bar" id="side-bar">
           <div class="main-frame">
             <li>
               <a href="#!" onclick="hideSideBar()"
@@ -71,12 +71,23 @@
 
       <script>
         function showSideBar() {
-          const sidebar = document.querySelector(".side-bar");
-          sidebar.style.display = "flex";
+          // const sidebar = document.querySelector(".side-bar");
+          // sidebar.style.display = "flex";
+          // // document.getElementById("side-bar").style.transform =
+          // //   "translateX(150px)";
+          // sidebar.style.transform = "translateX(-150px)";
+          const element = document.querySelector(".side-bar");
+          element.classList.add("active");
+          element.classList.remove("hidden");
         }
         function hideSideBar() {
-          const sidebar = document.querySelector(".side-bar");
-          sidebar.style.display = "none";
+          // const sidebar = document.querySelector(".side-bar");
+
+          // // sidebar.style.transform = "translateX(150px)";
+          // sidebar.style.display = "none";
+          const element = document.querySelector(".side-bar");
+          element.classList.remove("active");
+          element.classList.add("hidden");
         }
       </script>
 
